@@ -22,8 +22,8 @@ public class Spawn : MonoBehaviour {
 		monsterLL = new List<double[]> ();
 		var query = ParseObject.GetQuery ("Monster");
 		//you can use WhereWithinGeoBox or WhereNear or WhereWithinDistance to simulate pkmgo serach range
-		playerlon = capsule.GetComponent<LocationManager>().getLon();
-		playerlat = capsule.GetComponent<LocationManager>().getLat();
+		//playerlon = capsule.GetComponent<LocationManager>().getLon();
+		//playerlat = capsule.GetComponent<LocationManager>().getLat();
         DebugConsole.Log("playerlon: " + playerlon + " playerlat: " + playerlat);
         query.FindAsync ().ContinueWith (t => {
 			IEnumerable<ParseObject> results = t.Result;
